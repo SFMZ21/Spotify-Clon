@@ -65,13 +65,13 @@
         },
         {
             "_id": 5,
-            "name": "BEBE (Official Video)",
-            "album": "Giolì & Assia",
-            "cover": "https://i.scdn.co/image/ab67616d0000b27345ca41b0d2352242c7c9d4bc",
+            "name": "Besos en Guerra",
+            "album": "Balas perdidas",
+            "cover": "https://th.bing.com/th/id/R.2648234494131b8a77efcf78c5d0f74b?rik=COGJte%2fU02YYEQ&riu=http%3a%2f%2fauditorio-telmex.com%2farchivos%2fevento694%2fimagen_mediana.jpg&ehk=5R9c5JXvYUvXJKdnB0NgFh5MiqFfTy41nhmNGRu92NQ%3d&risl=&pid=ImgRaw&r=0",
             "artist": {
-                "name": "Giolì & Assia",
-                "nickname": "Giolì & Assia",
-                "nationality": "IT"
+                "name": "Morat",
+                "nickname": "Morat",
+                "nationality": "CO"
             },
             "duration": {
                 "start": 0,
