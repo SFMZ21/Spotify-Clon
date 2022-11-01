@@ -45,3 +45,8 @@
 .side-bar_list.list-three .list-wrapper-item{
     padding: .25rem 0;
 }
+
+.side-bar_list li{
+    cursor:pointer;
+
+}
