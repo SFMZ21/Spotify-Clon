@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TracksModel } from '@core/models/tracks.model';
 import { observable, Observable, of } from 'rxjs';
-import {map, mergeMap, tap} from 'rxjs/operators';
+import {catchError, map, mergeMap, tap} from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 
@@ -41,7 +41,12 @@ export class TrackService {
       //map(({dataRevertida}:any) =>{
         //return dataRevertida.filter((track:TracksModel) =>track._id===1)
       //})
-      tap(data => console.log(data))
+      tap(data => console.log(data)),
+      catchError((err)=> {
+        const{status, statusText}= err;
+        console.log('Algo paso!...',[status, statusText]);
+        return of([])
+      }) 
 
     )
 

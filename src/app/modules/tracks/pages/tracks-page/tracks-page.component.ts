@@ -20,16 +20,24 @@ listObservers$: Array<Subscription> =[]
   constructor(private trackService: TrackService) { }
 
   ngOnInit(): void {
+    this.loadDataAll()
+    this.loadDataRandom()
+  }
+
+  loadDataAll(): void {
     this.trackService.getAllTracks$()
-    .subscribe((response:TracksModel[]) =>{
+    .subscribe((response : TracksModel[]) => {
       this.tracksTrending = response
     })
+  }
 
+  loadDataRandom(): void{
     this.trackService.getAllRandom$()
     .subscribe((response:TracksModel[]) =>{
       this.tracksRandom = response
+    }, err =>{
+      console.log('Error de conexion');
     })
-    
   }
 
   ngOnDestroy(): void {
