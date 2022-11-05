@@ -14,6 +14,7 @@ export class MultimediaService {
   public timeElapsed$: BehaviorSubject<string> = new BehaviorSubject('00:00')
   public timeRemaining$: BehaviorSubject<string> = new BehaviorSubject('-00:00')
   public playerStatus$: BehaviorSubject<string> = new BehaviorSubject('paused')
+  public playerPorcentage$: BehaviorSubject<number> = new BehaviorSubject(0)
 
   constructor() { 
     this.audio = new Audio()
@@ -62,6 +63,12 @@ export class MultimediaService {
     console.log([duration,currentTime])
     this.setTimeElapsed(currentTime)
     this.setTimeRemaining(currentTime,duration)
+    this.setPorcentage(currentTime,duration)
+  }
+
+  private setPorcentage(currentTime:number, duration: number):void{
+    let porcentage = (currentTime *100)/duration;
+    this.playerPorcentage$.next(porcentage)
   }
   
   private setTimeElapsed(currentTime: number): void{

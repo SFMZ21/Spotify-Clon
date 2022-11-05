@@ -53,7 +53,7 @@
 
             <div class="time">{{multimediaService.timeElapsed$ |async}}</div>
             <span #progressBar  class="time-progress">
-                <span class="time-progress-live" [style.width]="10+'%'">
+                <span class="time-progress-live" [style.width]="(multimediaService.playerPorcentage$ |async)+'%'">
                 </span>
             </span>
             <div class="time">{{multimediaService.timeRemaining$ |async}}</div>
