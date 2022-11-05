@@ -101,4 +101,10 @@ export class MultimediaService {
   public togglePlayer(): void{
     (this.audio.paused) ? this.audio.play(): this.audio.pause()
   }
+
+  public seekAudio(porcentage:number):void{
+    const {duration} = this.audio
+    const portageToSecond =(porcentage *duration)/100
+    this.audio.currentTime =portageToSecond
+  }
 }
