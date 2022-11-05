@@ -30,18 +30,19 @@ export class SideBarComponent implements OnInit {
       },
       {name:'Tu biblioteca',
        icon:'uil uil-chart',
-       router:['/', 'favorites'],
-       query:{hola:'mundo'}
-      }
+       router:['/', 'tracks'],
+      },
+      {name:'Canciones que te gustan',
+      icon:'uil-heart-medical',
+      router:['/','favorites']
+     }
     ]
 
     this.mainMenu.accessLink=[
       {name:'Crear Lista',
        icon:'uil-plus-square'
       },
-      {name:'Canciones que te gustan',
-       icon:'uil-heart-medical'
-      }
+     
     ]
 
     this.customOptions=[
